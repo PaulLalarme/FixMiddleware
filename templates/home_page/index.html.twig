@@ -1,0 +1,122 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Alt'Agenda
+{% endblock %}
+
+{% block body %}
+
+	<div class="divaccueil">
+		<div class="searchbar">
+			<h1>Rechercher des évènements</h1>
+			<div class="dropdown">
+				<form method="get" action="{{ path ('app_evenement_filter') }}">
+					<select name="category" class="btncatdrop">
+						<option value="">Catégorie</option>
+						{% for cat in categorys %}
+							<option class="licat" value="{{ cat.id }}" {{cat.id == filters.category ? 'selected' : '' }}>{{cat.name}}</option>
+						{% endfor %}
+
+
+					</select>
+					<select name="departement" class="btncatdrop">
+						<option value="">Localisation</option>
+						{% for dep in departements %}
+							<option class="licat" value="{{dep.code}}" {{ dep.code == filters.departement ? 'selected' : '' }}>{{dep.nom}}</option>
+						{% endfor %}
+
+
+					</select>
+					<select name="date" class="btncatdrop">
+						<option value="">Date</option>
+						{% for per in periods %}
+							<option class="licat" value="{{per.id}}" {{per.id == filters.date ? 'selected' : '' }}>{{per.nom}}</option>
+						{% endfor %}
+
+
+					</select>
+					<div class="btnetmap">
+						<button type="submit" class="btnsearch">Rechercher</button>
+						<div class="outils">
+
+							<button class="map">
+								<div id="map-container" style="width:100%; height:400px; display: none;"></div>
+								<a class="apimap" href="#">
+									<p>Carte</p>
+									<img class="logomap" src="{{ asset('images/carte.png') }}">
+								</a>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<main>
+			<div class="case-events">
+
+
+				{% if evenements is not defined %}
+					{% set evenements = [] %}
+				{% endif %}
+
+				{# Si on a au moins un résultat, on affiche un tableau #}
+				{% if evenements|length > 0 %}
+					{% for ev in evenements %}
+						<div class="event-container">
+							<h2>{{ ev.location ? ev.location.nom : '—' }}
+								{{ ev.time ? ev.time|date('d/m/Y') : '—' }}</h2>
+
+							<div class="carte" style="background-color:{{ ev.category.color }}">
+								<div class="img-titre-event">
+									{% if ev.img %}
+										<img class="eventimg" src="{{ ev.img }}" alt="{{ ev.name }}">
+									{% endif %}
+									<a class="lien-page-event" href="{{ path('app_evenements_show', {'id': ev.id}) }}">
+										<h3>{{ ev.name }}</h3>
+									</div>
+									<div class="description">{{ ev.description }}
+									</div>
+									<div class="prix">{{ ev.price }}<span>
+											€</span>
+									</div>
+								</a>
+
+								{# <a href="{{ path('app_evenements_show', {'id': ev.id}) }}">Voir</a> #}
+
+							{% endfor %}
+
+
+						{% else %}
+							<section id="pageco">
+								<div class="divcat">
+									<div class="divcatcol">
+										<a href="{{ path('app_evenement_filter', {'category': 1}) }}">
+											<button class="btndivcat1">COUP DE COEUR</button>
+										</a>
+										<a href="{{ path('app_evenement_filter', {'category': 2}) }}">
+											<button class="btndivcat2">CONCERTS / ÉVENÈMENTS MUSICAUX</button>
+										</a>
+									</div>
+									<div class="divcatcol2">
+										<a href="{{ path('app_evenement_filter', {'category': 3}) }}">
+											<button class="btndivcat3">JEUX VIDÉOS / E-SPORT</button>
+										</a>
+										<a href="{{ path('app_evenement_filter', {'category': 4}) }}">
+											<button class="btndivcat4">LIFESTYLE</button>
+										</a>
+									</div>
+
+								</div>
+							</div>
+						</section>
+
+					{% endif %}
+				</div>
+
+
+			</main>
+
+
+		</body>
+
+	</html>
+{% endblock %}

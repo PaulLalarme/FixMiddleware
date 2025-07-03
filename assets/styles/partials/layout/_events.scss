@@ -1,0 +1,431 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Rubik+Distressed&display=swap");
+
+.divaccueil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .searchbar {
+        background-color: #f0cd8c;
+        border: 3px solid #f4a159;
+        border-radius: 27px;
+        width: 95vw;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+            font-size: 1rem;
+            margin-left: 2rem;
+        }
+
+        .dropdown {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            .btncatdrop {
+                background-color: #f7dfae;
+                border-radius: 19px;
+                border: 3px solid #cab673;
+                gap: 10px;
+                .licat {
+                    font-size: 20px;
+                }
+            }
+
+            .btnsearch {
+                background-color: #e96a25;
+                border-radius: 19px;
+                border: none;
+                color: white;
+            }
+        }
+    }
+}
+.case-events {
+    display: flex;
+    flex-direction: column;
+    .outils {
+        .map {
+              height: fit-content;
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            margin: 10px;
+            background: rgba(255, 255, 255, 0%);
+            border: 3px solid #cab673;
+            border-radius: 12px;
+            .apimap{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+            p {
+                font-size: 25px;
+            }
+
+            img {
+                margin-left: 5px;
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+        }
+    }
+    .map-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        .maps-google {
+            width: 80%;
+            height: 200px;
+        }
+    }
+}
+
+.events {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+
+    .event-container {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+        h2 {
+            margin: 5px;
+        }
+        .carte {
+            width: 95vw;
+            height: 95vw;
+            border-radius: 30px;
+
+            .lien-page-event {
+                text-decoration: none;
+            }
+
+            .description {
+                margin: 20px;
+                display: -webkit-box;
+                overflow-y: hidden;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+                font-size: 25px;
+                color: white;
+            }
+
+            .prix {
+                margin-left: 20px;
+            }
+
+            .img-titre-event {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 10px;
+                gap: 20px;
+
+                .eventimg {
+                    width: 3rem;
+                    height: 4rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1400px) {
+    .divaccueil {
+        .searchbar {
+            h1 {
+                font-size: 2rem;
+                margin-left: 2rem;
+            }
+            .dropdown {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                .btncatdrop {
+                    background-color: #f7dfae;
+                    border-radius: 19px;
+                    border: 3px solid #cab673;
+                    width: 20%;
+                    height: 2rem;
+                    gap: 10px;
+                }
+                .btnsearch {
+                    border-radius: 19px;
+                    border: none;
+                    color: white;
+                    padding-left: 40px;
+                    padding-right: 40px;
+                    width: 10rem;
+                    height: 2rem;
+                }
+            }
+        }
+    }
+    .case-events {
+        .outils {
+            display: flex;
+            justify-content: right;
+        }
+    }
+}
+
+@media screen and (min-width: 1401px) {
+    .divaccueil {
+        .searchbar {
+            h1 {
+                font-size: 2rem;
+                margin-left: 2rem;
+            }
+            .dropdown {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                .btncatdrop {
+                    background-color: #f7dfae;
+                    border-radius: 19px;
+                    border: 3px solid #cab673;
+                    width: 20%;
+                    height: 2rem;
+                    gap: 10px;
+                }
+                .btnsearch {
+                    border-radius: 19px;
+                    border: none;
+                    color: white;
+                    padding-left: 40px;
+                    padding-right: 40px;
+                    width: 10rem;
+                    height: 2rem;
+                }
+            }
+        }
+    }
+    .case-events {
+        .outils {
+            display: flex;
+            justify-content: right;
+        }
+        .events {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: flex-start;
+            .event-container {
+                width: 30%; // ou 33.333% si tu veux 3 colonnes
+                margin: 10px;
+                display: flex;
+                flex-direction: column;
+
+                .carte {
+                    width: 100%; // pour prendre toute la largeur de .event-container
+                    height: 320px;
+                }
+            }
+        }
+    }
+}
+
+// @media screen and (min-width: 1401px) {
+//     .case-events {
+//         display: flex;
+//         flex-direction: column;
+//         .outils {
+//             display: flex;
+//             justify-content: right;
+//             margin-right: 20px;
+//             .map {
+//                 height: 1.5rem;
+//                 width: 5rem;
+//                 display: flex;
+//                 flex-direction: row;
+//                 justify-content: space-around;
+//                 align-items: center;
+//                 margin: 10px;
+//                 background: rgba(255, 255, 255, 0%);
+//                 border: 3px solid #cab673;
+//                 border-radius: 12px;
+//                 p {
+//                     font-size: 25px;
+//                 }
+//                 img {
+//                     margin-left: 5px;
+//                     width: 1.2rem;
+//                     height: 1.2rem;
+//                 }
+//             }
+//         }
+//         .events {
+//             display: flex;
+//             gap: 20px;
+//             align-items: center;
+//             justify-content: center;
+//             flex-wrap: wrap;
+//             flex: 0 0 33.3333%;
+//             .loc-date-container {
+//                 display: flex;
+//                 flex-direction: column;
+//                 .loc-date {
+//                     display: flex;
+//                 }
+//             }
+//             .carte {
+//                 display: flex;
+//                 flex-direction: column;
+//                 width: 20rem;
+//                 height: 350px;
+//                 border-radius: 30px;
+//                 .lien-page-event {
+//                     text-decoration: none;
+//                 }
+//                 .description {
+//                     margin: 20px;
+//                     display: -webkit-box;
+//                     overflow-y: hidden;
+//                     -webkit-line-clamp: 5;
+//                     -webkit-box-orient: vertical;
+//                     font-size: 25px;
+//                     color: white;
+//                 }
+//                 .prix {
+//                     margin-left: 20px;
+//                 }
+//                 .img-titre-event {
+//                     display: flex;
+//                     justify-content: space-around;
+//                     align-items: center;
+//                     margin-top: 20px;
+//                     .eventimg {
+//                         width: 90px;
+//                         height: 135px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// @media screen and (min-width: 801px) and (max-width: 1400px) {
+//         .divaccueil {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         .searchbar {
+//             display: flex;
+//             flex-direction: column;
+//             background-color: #f0cd8c;
+//             border: 3px solid #f4a159;
+//             border-radius: 27px;
+//             width: 90%;
+//             height: 200px;
+//             }
+//         }
+//             h1 {
+//                 margin-top: 1rem;
+//                 margin-bottom: 1rem;
+//                 margin-left: 1rem;
+//             }
+//             .dropdown {
+//                 display: flex;
+//                 flex-direction: row;
+//                 justify-content: center;
+//                 align-items: center;
+//                 gap: 20px;
+//                 .btncatdrop {
+//                     background-color: #f7dfae;
+//                     border-radius: 19px;
+//                     border: 3px solid #cab673;
+//                     width: 20%;
+//                     height: 2rem;
+//                     gap: 10px;
+//                 }
+//                 .btnsearch {
+//                     background-color: #e96a25;
+//                     border-radius: 19px;
+//                     border: none;
+//                     color: white;
+//                     padding-left: 40px;
+//                     padding-right: 40px;
+//                     width: 10rem;
+//                     height: 2rem;
+//                 }
+//             }
+//         }
+
+// @media screen and (max-width: 800px) {
+//     .case-events {
+//         display: flex;
+//         flex-direction: column;
+//         .searchbar {
+//             height: 200px;
+//             width: 90%;
+//             .dropdown {
+//                 flex-direction: row;
+//                 .btncatdrop {
+//                     width: 20%;
+//                 }
+//             }
+//         }
+//         .events {
+//             display: flex;
+//             gap: 20px;
+//             align-items: center;
+//             justify-content: center;
+//             flex-wrap: wrap;
+//             flex: 0 0 33.3333%;
+//             .loc-date-container {
+//                 display: flex;
+//                 flex-direction: column;
+//                 .loc-date {
+//                     display: flex;
+//                 }
+//             }
+//             .carte {
+//                 background-color: #694973;
+//                 display: flex;
+//                 flex-direction: column;
+//                 width: 20rem;
+//                 height: 350px;
+//                 border-radius: 30px;
+//                 .lien-page-event {
+//                     text-decoration: none;
+//                 }
+//                 .description {
+//                     margin: 20px;
+//                     display: -webkit-box;
+//                     overflow-y: hidden;
+//                     -webkit-line-clamp: 5;
+//                     -webkit-box-orient: vertical;
+//                     font-size: 25px;
+//                     color: white;
+//                 }
+//                 .prix {
+//                     margin-left: 20px;
+//                 }
+//                 .img-titre-event {
+//                     display: flex;
+//                     justify-content: space-around;
+//                     align-items: center;
+//                     margin-top: 20px;
+//                     .eventimg {
+//                         width: 90px;
+//                         height: 135px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

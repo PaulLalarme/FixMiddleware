@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+<form method="post">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alt'Agenda</title>
+
+</head>
+
+<body>
+    <main>
+        <section id="pageco">
+            <div class="divco">
+                <h1>Connexion</h1>
+                <form class="form">
+                <input id="inputEmail" placeholder="Adresse e-mail" type="email" value="{{ last_username }}" name="email" id="inputEmail" autocomplete="email" required autofocus>
+                    <input id="inputMdp" placeholder="Mot de passe" type="password" name="password" autocomplete="current-password" required>
+    <input type="hidden" name="_csrf_token" data-controller="csrf-protection" value="{{ csrf_token('authenticate') }}">
+                    <div class="divcheck">
+                        <input class ="check" class ="remember" type="checkbox" name="_remember_me"> Se souvenir de moi
+                    </div><button class="btnco" id="btnco" type="submit">
+                        <p class="seco">Se connecter</p>
+                    </button>
+                </form>
+            </div>   
+             {% if app.user %}
+        <div class="mb-3">
+            <p>Vous êtes connectés en tant que {{ app.user.username }}, <br><a href="{{ path('app_logout') }}">Se déconnecter</a></p>
+        </div>
+    {% endif %}
+        </section>
+
+    </main>
+</body>
+
+</html>
+{% endblock %}

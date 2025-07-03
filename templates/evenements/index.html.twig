@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Évènements
+{% endblock %}
+
+{% block body %}
+
+		            <div class="divaccueil">
+                <div class="searchbar">
+                    <h1>Rechercher des évènements</h1>
+                    <div class="dropdown">
+                    <form method="get" action="{{ path ('app_evenement_filter') }}">
+                    <select name ="category" class="btncatdrop">
+                    <option  value="">Catégorie</option>
+                    {% for cat in categorys %}
+                        <option class="licat" value="{{ cat.id }}" {{cat.id == filters.category ? 'selected' : '' }}></option>
+                        {% endfor %}
+                            {# <option class="licat" value="option1">
+                                <p>Coup de coeur</p>
+                            </option>
+                            <option class="licat" value="option2">Concerts / Évènements musicaux</option>
+                            <option class="licat" value="option3">Jeux vidéos / E-sport</option>
+                            <option class="licat" value="option4">Lifestyle</option> #}
+                            
+                    </select>
+                    <select name ="departement" class="btncatdrop">
+                    <option value="">Localisation</option>
+                        {% for dep in departements %}
+                        <option class="licat" value="{{dep.code}}" {{ dep.code == filters.departement ? 'selected' : '' }}>{{dep.nom}}</option>
+                        {% endfor %}
+                            {# <option class="licat" value="option1">Doubs</option>
+                            <option class="licat" value="option2">Haute-Saône</option>
+                            <option class="licat" value="option3">Jura</option>
+                            <option class="licat" value="option4">Territoire de Belfort</option> #}
+                            
+                    </select>
+                    <select name="date" class="btncatdrop">
+                    <option value="">Date</option>
+                        {% for per in periods %}
+                        <option class="licat" value="{{per.id}}"{{per.id == filters.date ? 'selected' : '' }}>{{per.nom}}</option>
+                        {% endfor %}
+                            {# <option class="licat" value="option1">Cette semaine</option>
+                            <option class="licat" value="option2">Ce week-end</option>
+                            <option class="licat" value="option3">Ce mois-ci</option>
+                            <option class="licat" value="option4">À venir</option> #}
+                            
+                    </select><button type="submit" class="btnsearch"><a class="textsearch" href="{{ path('app_evenement_filter') }}">Rechercher</a></button>
+                </form></div></div>
+
+<div class="case-events">
+		<div class="outils">
+
+			<button class="map">
+			<div id="map-container" style="width:100%; height:400px; display: none;">
+			
+			</div>
+			<a class="apimap" href="#">
+				<p>Carte</p>
+				<img class="logomap" src="{{ asset('images/carte.png') }}">
+			</a>
+			</button>
+		</div>
+
+	
+		<div class="events">
+
+			{# {% for evenement in evenements %}
+				<div class="event-container">
+					<h2>{{ evenement.location }}
+						{{ evenement.time ? evenement.time|date('d-m-Y') : '' }}
+					</h2>
+					<div class="carte" style="background-color:{{ evenement.category.color }}">
+						<div class="img-titre-event">
+							<img class="eventimg" src="{{ evenement.img }}">
+							<a class="lien-page-event" href="{{ path('app_evenements_show', {'id': evenement.id}) }}">
+								<h3>{{ evenement.name }}</h3>
+							</div>
+							<div class="description">{{ evenement.description }}
+							</div>
+							<div class="prix">{{ evenement.price }}<span>
+									€</span>
+							</div>
+						</a>
+						{# <a href="{{ path('app_evenements_edit', {'id': evenement.id}) }}">edit</a> #}
+					{# </div>
+				</div>
+
+
+				{% else %}
+
+			{% endfor %}  #}
+			
+		</div>
+
+
+		{# <a href="{{ path('app_evenements_new') }}">Create new</a> #}
+
+	{% endblock %}

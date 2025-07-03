@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon compte{% endblock %}
+
+{% block body %}
+
+    <main>
+        <section id="pageco">
+            <div class="fondinscription">
+                <h1>Mes informations</h1>
+                <div class="divcol">
+                    <div class="col">
+                    {{ form_start(accountForm) }}
+                    {{ form_widget(accountForm.username, {
+                        attr: {
+                            class: 'caseinscription', placeholder: 'Pseudo'
+                        }
+                    }) }}
+            
+                    {{ form_widget(accountForm.email, {
+                        attr: {
+                            class: 'caseinscription', placeholder: 'Email'
+                        }
+                    }) }}
+
+                    {{ form_widget(accountForm.plainPassword, {
+                        attr: {
+                            class: 'caseinscription', placeholder: 'Mot de passe'
+                        }
+                    }) }}
+
+                    {{ form_widget(accountForm.birthdate, {
+                        attr: {
+                            class: 'caseinscription', placeholder: 'Date de naissance'
+                        }
+                    }) }}
+                    </div>
+                    <div class="col">
+
+                    {{ form_widget(accountForm.adresse, {
+                        attr: {
+                            class: 'caseinscription', placeholder: 'N° et adresse'
+                        }
+                    }) }}
+
+                    {{ form_widget(accountForm.codepostal, {
+                        attr: {
+                            class: 'caseinscription', placeholder: 'Code postal'
+                        }
+                    }) }}
+
+                    {{ form_widget(accountForm.ville, {
+                        attr: {
+                            class: 'caseinscription', placeholder: 'Ville'
+                        }
+                    }) }}
+                </div><button type="submit" class="btninscription" id="btnco">
+                    <p class="sinscrire btn btn-primary">Mettre à jour</p>
+                </button><a class="logout" href="{{ path('app_logout') }}"><p>Déconnexion</p><img src="images/logout3.png"></a>
+            {{ form_end(accountForm) }}</div>
+
+                
+        </section>
+
+    </main>
+
+{% endblock %}

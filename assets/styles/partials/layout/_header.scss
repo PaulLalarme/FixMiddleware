@@ -1,0 +1,247 @@
+#idheader {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    #burger {
+        display: none;
+        // position: absolute;
+        // width: 100%;
+        // left: 0;
+        // top: 0px;
+        // font-size: 20px;
+        // nav {
+        //     overflow: hidden;
+        //     background : #f0cd8c;
+        //     width: 100%;
+        //     text-align: center;
+        //     padding: 20px;
+        //     transition: transform 1s;
+        //     a {
+
+        //         color: black;
+        //         text-decoration: none;
+        //         display: block;
+        //         padding: 10px;
+        //     }
+        // }
+    }
+
+    // #open,
+    // #close {
+    //     position: absolute;
+    //     height: 45px;
+    //     right: 20px;
+    //     font-size: 50px;
+    //     z-index: 1;
+    // }
+    // #burger:target #open,
+    // #burger:not(:target) #close {
+    //     display: none;
+    // }
+
+    // #burger:not(:target) nav {
+    //     transform: translate3d(0, -250px, 0px);
+    // }
+
+    .divnav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .nav {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            .headerIcon {
+                display: flex;
+                gap: 10px;
+            }
+        }
+
+        .headerAuth {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            .navbar-titre {
+                gap: 10px;
+                display: flex;
+                font-family: "League Spartan";
+                font-size: 30px;
+                text-decoration: none;
+                align-items: center;
+            }
+        }
+
+        .annonce {
+            text-decoration: none;
+            justify-self: right;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #idheader {
+        #burger {
+            display: block;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0px;
+            font-size: 20px;
+            z-index: 10;
+            nav {
+                position: relative;
+                right: 50%;
+                z-index: 5;
+                background: #f0cd8c;
+                overflow: hidden;
+                width: 100vw;
+                text-align: center;
+                padding: 10px;
+                transition: max-height 0.5s ease, background 0.5s ease, padding 0.3s ease;    
+                border: 3px solid #e96a25;   
+                hr{
+                    border:1px solid #e96a25;
+                    width: 60%;
+                }             
+                    .pseudonav{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                a {
+                    color: black;
+                    font-size: 20px;
+                    text-decoration: none;
+                    display: block;
+                    padding: 10px;
+                }
+            }
+        }
+
+        #open,
+        #close {
+            position: absolute;
+            height: 45px;
+            right: -70px;
+            font-size: 45px;
+            z-index: 11;
+        }
+        #burger:target #open,
+        #burger:not(:target) #close {
+            display: none;
+        }
+
+        #burger:not(:target) nav {
+            display: none;
+        }
+
+        #burget:target nav {
+            max-height: 500px; // ou auto si JS
+            background: #f0cd8c;
+            padding: 20px;
+        }
+
+        .divnav {
+            display: none;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+    .logo {
+        width: 200px;
+        height: 98px;
+    }
+    .burger {
+        display: flex;
+    }
+    .divnav {
+        display: none;
+    }
+}
+
+// @media screen and (min-width: 1401px) {
+//     #idheader {
+//         width: 100%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-around;
+//         gap: 100px;
+//         .divnav {
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: right;
+//             .annonce {
+//                 display: flex;
+//                 justify-content: right;
+//                 padding: 5px;
+//                 text-decoration: none;
+//             }
+//             .nav {
+//                 display: flex;
+//                 gap: 30px;
+//                 .navbar-titre {
+//                     font-family: "League Spartan";
+//                     font-size: 30px;
+//                     text-decoration: none;
+//                 }
+//                 .emoticone-header {
+//                     width: 47px;
+//                     height: 47px;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// @media screen and (min-width: 801px) and (max-width: 1400px) {
+//     #idheader {
+//         width: 100%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-around;
+//         gap: 100px;
+//         .logo{
+//           width: 80%;
+//         }
+//         .divnav {
+//             .annonce {
+//                 display: none;
+//                 justify-content: right;
+//                 padding: 5px;
+//                 text-decoration: none;
+//             }
+//             .nav {
+//                 display: none;
+//             }
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 800px) {
+//     #idheader {
+//         width: 100%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-around;
+//         gap: 100px;
+//         .logo{
+//           width: 80%;
+//         }
+//         .divnav {
+//             .annonce {
+//                 display: none;
+//                 justify-content: right;
+//                 padding: 5px;
+//                 text-decoration: none;
+//             }
+//             .nav {
+//                 display: none;
+//             }
+//         }
+//     }
+// }

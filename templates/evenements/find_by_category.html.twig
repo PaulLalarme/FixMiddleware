@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Evenements{% endblock %}
+
+{% block body %}
+    <h1>Evenements</h1>
+
+    <table class="table">
+        <thead>
+            {# <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Img</th>
+                <th>Time</th>
+                <th>actions</th>
+            </tr> #}
+        </thead>
+        <tbody>
+        {% for evenement in evenements %}
+            <tr>
+                <td>{{ evenement.id }}</td>
+                <td>{{ evenement.name }}</td>
+                <td>{{ evenement.location }}</td>
+                <td>{{ evenement.category }}</td>
+                <td>{{ evenement.description }}</td>
+                <td>{{ evenement.price }}</td>
+                <td><img src="{{ evenement.img }}"></td>
+                <td>{{ evenement.time ? evenement.time|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('app_evenements_show', {'id': evenement.id}) }}">show</a>
+                    {# <a href="{{ path('app_evenements_edit', {'id': evenement.id}) }}">edit</a> #}
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_evenements_new') }}">Create new</a>
+{% endblock %}

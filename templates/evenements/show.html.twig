@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Évènement{% endblock %}
+
+
+{% block body %}
+
+
+    <button class="map">
+        <div id="map-container" style="width:100%; height:400px; display: none;"></div>
+        <a class="apimap" href="#">
+            <p>Carte</p>
+            <img class="logomap" src="{{ asset('images/carte.png') }}">
+        </a>
+    </button>
+
+
+    <div class="back-search">
+        <a class="back-search-txt" href="{{ path('app_home_page') }}">
+            <img src="{{ asset('images/arrow-left.png') }}">
+            <p>Retour à la recherche</p>
+        </a>
+    </div>
+
+
+    {% if evenement %}
+        <div class="container-show" style="background-color:{{ evenement.category.color }}">
+            <h3>{{ evenement.name }}</h3>
+            <div class="location">
+                <img src="{{ asset('images/pin.png') }}"> {{ evenement.location }}
+                {{ evenement.time ? evenement.time|date('d-m-Y') : '' }}
+            </div>
+
+
+            <div class="description">
+                <img class="eventimg" src="/{{ evenement.img }}">
+                {{ evenement.description }}
+            </div>
+
+
+            <div class="infos">
+                <h4>Infos pratiques</h4>
+                <ul>
+                    <li><img src="{{ asset('images/bus.png') }}">Accès: {{ evenement.access }}</li>
+                    <li><img src="{{ asset('images/fork.png') }}">Restauration: {{ evenement.restauration }}</li>
+                    <li><img src="{{ asset('images/wheelchair.png') }}">Accessibilité: {{ evenement.accessibility }}</li>
+                    <li><img src="{{ asset('images/stickman.png') }}">Âge minimum: {{ evenement.minimumage }}</li>
+                    <li id="tarif">Tarif: {{ evenement.price }} €</li>
+                </ul>
+            </div>
+        </div>
+    {% else %}
+        <p>Aucun évènement trouvé.</p>
+    {% endif %}
+
+
+{% endblock %}
+
+
+
+
+

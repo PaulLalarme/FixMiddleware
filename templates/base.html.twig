@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+
+	</head>
+	<body style="background-image: url('{{ asset('images/background.png') }}')">
+		<div id="main-wrapper">
+			<header>
+				<div id="idheader">
+					<a href="{{ path('app_home_page') }}">
+						<img src="{{ asset('images/Logo.png') }}" class="logo" style="cursor: pointer;">
+					</a>
+
+
+					<div id="burger">
+						<a href="#burger" id="open">
+							<img src="{{asset('images/burger.png')}}" class="burger">
+						</a>
+
+						<a href="#" id="close">
+							x
+						</a>
+
+						<nav>
+							<div class="pseudonav">
+								{% if app.user %}
+									{% if app.user.avatar %}
+										<img width="45px" height="45px" class="emoticone-header" src="{{ app.user.avatar }}" alt="Avatar">
+									{% else %}
+										<img width="45px" height="45px" class="emoticone-header" src="{{ asset('images/user.png') }}" alt="Default avatar">
+									{% endif %}
+									<a class="navbar-titre" href="{{ path('compte')}}">
+										<p>{{ app.user.username }}</p>
+										
+									</a>
+								</div><hr>
+							{% else %}
+								<a class="navbar-titre" href="{{ path('app_register') }}">Inscription</a>
+								<hr>
+								<a class="navbar-titre" href="{{ path('login') }}">Connexion</a>
+							{% endif %}
+							<a class="navbar-titre" href="#">Déposer votre annonce</a>
+							<hr>
+							<a class="navbar-titre" href="#">Rechercher</a>
+							<hr>
+							<a class="navbar-titre" href="#">Panier</a>
+						</nav>
+					</div>
+
+
+					<div class="divnav">
+						<div class="nav">
+							<a class="annonce" href="#">Déposer votre annonce</a>
+							<div class="headerIcon">
+								<img width="45px" height="45px" src="{{ asset('images/loupe-search-svgrepo-com-ih738VQ.png') }}" class="emoticone-header">
+								<img width="45px" height="45px" src="{{ asset('images/shopping-basket-supermarket-svgrepo-com.png') }}" class="emoticone-header">
+							</div>
+						</div>
+						<div class="headerAuth">
+							{% if app.user %}
+								{% if app.user.avatar %}
+									<img width="45px" height="45px" class="emoticone-header" src="{{ app.user.avatar }}" alt="Avatar">
+								{% else %}
+									<img width="45px" height="45px" class="emoticone-header" src="{{ asset('images/user.png') }}" alt="Default avatar">
+								{% endif %}
+								<a class="navbar-titre" href="{{ path('compte')}}">
+									<p>{{ app.user.username }}</p>
+								</a>
+							{% else %}
+								<a class="navbar-titre" href="{{ path('app_register') }}">Inscription</a>
+								<a class="navbar-titre" href="{{ path('login') }}">Connexion</a>
+							{% endif %}
+						</div>
+					</div>
+
+				</div>
+			</header>
+			{% block body %}{% endblock %}
+			<footer
+				id="footer">
+				<!-- <div id="footer"></div> -->
+				<div class="menubas">
+					<p class="apropos">À propos</p>
+					<a class="contact" href="mailto:contact.altagenda@gmail.com?subject=Prise de contact&amp;body=J'aimerais des informations !">Nous
+																							                contacter</a>
+					<p class="mentions">Informations légales</p>
+				</div>
+				<div class="sociaux"><img src="{{ asset('images/facebook-svgrepo-com 2.png') }}" class="logosociaux"><img src="{{ asset('images/instagram-svgrepo-com 1.png') }}" class="logosociaux">
+					<img src="{{ asset('images/twitter-svgrepo-com (1) 1.png') }}" class="logosociaux"></div>
+			</footer>
+		</div>
+		{{ encore_entry_script_tags('googlemaps') }}
+	</body>
+</html>

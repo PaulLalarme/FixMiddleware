@@ -1,0 +1,86 @@
+#footer {
+  background-color: #f7dfae;
+  border: 1px, solid, #cab673;
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  // position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+  .menubas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .apropos {
+      font-size: 30px;
+      margin: 0;
+    }
+    .contact {
+      font-size: 30px;
+      margin: 0;
+      text-decoration: none;
+    }
+    .mentions {
+      font-size: 30px;
+      margin: 0;
+    }
+  }
+  .sociaux {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    .logosociaux {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 45px;
+      width: 45px;
+    }
+  }
+}
+// -----------------------------------------------------------
+@media screen and (max-width: 1000px) {
+  #footer {
+    background-color: #f7dfae;
+    border: 1px, solid, #cab673;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    width: 100vw;
+    .menubas {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      justify-content: center;
+      .apropos {
+        font-size: 20px !important;
+        margin: 0;
+        margin-top: 15px;
+      }
+      .contact {
+        font-size: 20px !important;
+        margin: 0;
+        text-decoration: none;
+      }
+      .mentions {
+        font-size: 20px !important;
+        margin: 0;
+      }
+    }
+    .sociaux {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      .logosociaux {
+        height: 45px;
+        width: 45px;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+    {% for flash_error in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+    {% endfor %}
+
+   
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alt'Agenda</title>
+
+</head>
+
+<body>
+    <main>
+        <section id="pageco">
+             {{ form_errors(registrationForm) }}<div class="fondinscription">
+                <h1>Inscription</h1>
+                <div class="divcol">
+                    <div class="col">
+                        {{ form_start(registrationForm) }}
+                  
+        {{ form_widget(registrationForm.username, {
+    attr: {
+        class: 'caseinscription',
+        placeholder: 'Pseudo'
+    }
+}) }}          
+
+{{ form_widget(registrationForm.email, {
+    attr: {
+        class: 'caseinscription',
+        placeholder: 'Adresse e-mail'
+    }
+}) }}
+
+{{ form_widget(registrationForm.plainPassword, {
+    attr: {
+        class: 'caseinscription',
+        placeholder: 'Mot de passe'
+    }
+}) }}
+
+                    {{ form_row(registrationForm.agreeTerms, { label : 'Accepter les termes et conditions du site' }) }}
+                    </div>
+        <button type="submit" class="btninscription" id="btnco"><p class="sinscrire">S'inscrire</p></button>
+    
+                </div>
+            </div>{{ form_end(registrationForm) }}
+        </section>
+
+    </main>
+</body>
+
+</html>
+
+
+
+
+
+
+   
+        
+       
+
+
+
+{% endblock %}

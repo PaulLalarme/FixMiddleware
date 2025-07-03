@@ -1,0 +1,253 @@
+@media screen and (min-width: 1401px) {
+    main {
+        #pageco {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .divco {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 45%;
+                height: 450px;
+                background-color: #f0cd8c;
+                border-radius: 27px;
+                text-align: center;
+                border: solid 3px #f4a159;
+                #inputEmail {
+                    text-align: center;
+                    height: 1.7rem;
+                    width: 447px;
+                    background-color: #f7dfae;
+                    border: 3px solid #cab673;
+                    border-radius: 19px;
+                }
+                #inputMdp {
+                    text-align: center;
+                    height: 1.7rem;
+                    width: 447px;
+                    background-color: #f7dfae;
+                    border: 3px solid #cab673;
+                    border-radius: 19px;
+                }
+                .divcheck {
+                    display: flex;
+                    gap: 10px;
+                    margin: 20px;
+                }
+                .btnco {
+                    display: flex;
+                    cursor: pointer;
+                    justify-content: center;
+                    align-items: center;
+                    height: 57px;
+                    width: 203px;
+                    border: none;
+                    background-color: #e96a25;
+                    color: white;
+                    border-radius: 19px;
+                    .seco {
+                        color: white;
+                        font-family: "League Spartan";
+                        font-weight: 600;
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+        .mb-3 {
+            display: flex;
+            text-align: center;
+            margin: 20px;
+        }
+    }
+
+    .btnaccueil {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 57px;
+        width: 203px;
+        border: none;
+        background-color: #e96a25;
+        color: white;
+        border-radius: 19px;
+        .accueil {
+            color: white;
+            font-family: "League Spartan";
+            font-weight: 600;
+            font-size: 25px;
+        }
+    }
+}
+// -------------------------------------------------------------
+@media screen and (min-width: 801px) and (max-width: 1400px) {
+    main {
+        #pageco {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .divco {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 45%;
+                height: 400px;
+                background-color: #f0cd8c;
+                border-radius: 27px;
+                text-align: center;
+                border: solid 3px #f4a159;
+                #inputEmail {
+                    height: 1.7rem;
+                    width: 250px;
+                    background-color: #f7dfae;
+                    border: 3px solid #cab673;
+                    border-radius: 19px;
+                }
+                #inputMdp {
+                    height: 1.7rem;
+                    width: 250px;
+                    background-color: #f7dfae;
+                    border: 3px solid #cab673;
+                    border-radius: 19px;
+                }
+                .divcheck {
+                    display: flex;
+                    gap: 10px;
+                    margin: 20px;
+                }
+                .btnco {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 57px;
+                    width: 203px;
+                    border: none;
+                    background-color: #e96a25;
+                    color: white;
+                    border-radius: 19px;
+                    .seco {
+                        color: white;
+                        font-family: "League Spartan";
+                        font-weight: 600;
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+        .mb-3 {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 20px;
+        }
+    }
+
+    .btnaccueil {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 57px;
+        width: 203px;
+        border: none;
+        background-color: #e96a25;
+        color: white;
+        border-radius: 19px;
+        .accueil {
+            color: white;
+            font-family: "League Spartan";
+            font-weight: 600;
+            font-size: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        #pageco {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .divco {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 350px;
+                height: 450px;
+                background-color: #f0cd8c;
+                border-radius: 27px;
+                text-align: center;
+                border: solid 3px #f4a159;
+                #inputEmail {
+                    text-align: center;
+                    height: 1.7rem;
+                    width: 305px;
+                    background-color: #f7dfae;
+                    border: 3px solid #cab673;
+                    border-radius: 19px;
+                }
+                #inputMdp {
+                    text-align: center;
+                    height: 1.7rem;
+                    width: 305px;
+                    background-color: #f7dfae;
+                    border: 3px solid #cab673;
+                    border-radius: 19px;
+                }
+                .divcheck {
+                    display: flex;
+                    gap: 10px;
+                    margin: 20px;
+                }
+                .btnco {
+                    display: flex;
+                    cursor: pointer;
+                    justify-content: center;
+                    align-items: center;
+                    height: 57px;
+                    width: 203px;
+                    border: none;
+                    background-color: #e96a25;
+                    color: white;
+                    border-radius: 19px;
+                    .seco {
+                        color: white;
+                        font-family: "League Spartan";
+                        font-weight: 600;
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+        .mb-3 {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 20px;
+        }
+    }
+
+    .btnaccueil {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 57px;
+        width: 203px;
+        border: none;
+        background-color: #e96a25;
+        color: white;
+        border-radius: 19px;
+        .accueil {
+            color: white;
+            font-family: "League Spartan";
+            font-weight: 600;
+            font-size: 25px;
+        }
+    }
+}

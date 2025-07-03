@@ -1,0 +1,1025 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Rubik+Distressed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Rubik+Distressed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Rubik+Distressed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Rubik+Distressed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Rubik+Distressed&display=swap");
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+html #main-wrapper,
+body #main-wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+html #main-wrapper main,
+body #main-wrapper main {
+  flex: 1; /* prend tout l'espace restant */
+}
+
+* {
+  font-family: "league spartan";
+  color: black;
+  font-size: 30px;
+}
+* h1 {
+  font-size: 50px;
+  font-weight: 600;
+}
+* h3 {
+  font-family: "rubik distressed";
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+}
+* p {
+  font-size: 20px;
+}
+* .textsearch {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (min-width: 1401px) {
+  main #pageco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main #pageco .divco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    height: 450px;
+    background-color: #f0cd8c;
+    border-radius: 27px;
+    text-align: center;
+    border: solid 3px #f4a159;
+  }
+  main #pageco .divco #inputEmail {
+    text-align: center;
+    height: 1.7rem;
+    width: 447px;
+    background-color: #f7dfae;
+    border: 3px solid #cab673;
+    border-radius: 19px;
+  }
+  main #pageco .divco #inputMdp {
+    text-align: center;
+    height: 1.7rem;
+    width: 447px;
+    background-color: #f7dfae;
+    border: 3px solid #cab673;
+    border-radius: 19px;
+  }
+  main #pageco .divco .divcheck {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+  }
+  main #pageco .divco .btnco {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    height: 57px;
+    width: 203px;
+    border: none;
+    background-color: #e96a25;
+    color: white;
+    border-radius: 19px;
+  }
+  main #pageco .divco .btnco .seco {
+    color: white;
+    font-family: "League Spartan";
+    font-weight: 600;
+    font-size: 30px;
+  }
+  main .mb-3 {
+    display: flex;
+    text-align: center;
+    margin: 20px;
+  }
+  .btnaccueil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 57px;
+    width: 203px;
+    border: none;
+    background-color: #e96a25;
+    color: white;
+    border-radius: 19px;
+  }
+  .btnaccueil .accueil {
+    color: white;
+    font-family: "League Spartan";
+    font-weight: 600;
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 801px) and (max-width: 1400px) {
+  main #pageco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main #pageco .divco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    height: 400px;
+    background-color: #f0cd8c;
+    border-radius: 27px;
+    text-align: center;
+    border: solid 3px #f4a159;
+  }
+  main #pageco .divco #inputEmail {
+    height: 1.7rem;
+    width: 250px;
+    background-color: #f7dfae;
+    border: 3px solid #cab673;
+    border-radius: 19px;
+  }
+  main #pageco .divco #inputMdp {
+    height: 1.7rem;
+    width: 250px;
+    background-color: #f7dfae;
+    border: 3px solid #cab673;
+    border-radius: 19px;
+  }
+  main #pageco .divco .divcheck {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+  }
+  main #pageco .divco .btnco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 57px;
+    width: 203px;
+    border: none;
+    background-color: #e96a25;
+    color: white;
+    border-radius: 19px;
+  }
+  main #pageco .divco .btnco .seco {
+    color: white;
+    font-family: "League Spartan";
+    font-weight: 600;
+    font-size: 30px;
+  }
+  main .mb-3 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+  }
+  .btnaccueil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 57px;
+    width: 203px;
+    border: none;
+    background-color: #e96a25;
+    color: white;
+    border-radius: 19px;
+  }
+  .btnaccueil .accueil {
+    color: white;
+    font-family: "League Spartan";
+    font-weight: 600;
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 800px) {
+  main #pageco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main #pageco .divco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 450px;
+    background-color: #f0cd8c;
+    border-radius: 27px;
+    text-align: center;
+    border: solid 3px #f4a159;
+  }
+  main #pageco .divco #inputEmail {
+    text-align: center;
+    height: 1.7rem;
+    width: 305px;
+    background-color: #f7dfae;
+    border: 3px solid #cab673;
+    border-radius: 19px;
+  }
+  main #pageco .divco #inputMdp {
+    text-align: center;
+    height: 1.7rem;
+    width: 305px;
+    background-color: #f7dfae;
+    border: 3px solid #cab673;
+    border-radius: 19px;
+  }
+  main #pageco .divco .divcheck {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+  }
+  main #pageco .divco .btnco {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    height: 57px;
+    width: 203px;
+    border: none;
+    background-color: #e96a25;
+    color: white;
+    border-radius: 19px;
+  }
+  main #pageco .divco .btnco .seco {
+    color: white;
+    font-family: "League Spartan";
+    font-weight: 600;
+    font-size: 30px;
+  }
+  main .mb-3 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+  }
+  .btnaccueil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 57px;
+    width: 203px;
+    border: none;
+    background-color: #e96a25;
+    color: white;
+    border-radius: 19px;
+  }
+  .btnaccueil .accueil {
+    color: white;
+    font-family: "League Spartan";
+    font-weight: 600;
+    font-size: 25px;
+  }
+}
+.cookie-container {
+  background: linear-gradient(260deg, #9b6c50 0%, #4f2626 100%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  display: flex;
+  width: 30rem;
+  height: 10rem;
+  border-radius: 1.2rem;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "League Spartan";
+  font-style: normal;
+}
+.cookie-container .logo-cookie {
+  width: 250px;
+}
+.cookie-container .text {
+  width: 70%;
+}
+.cookie-container .text .cookie-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+.cookie-container .text .cookie-subtitle {
+  padding: 0.5rem 0rem;
+  color: white;
+}
+.cookie-container .text .button-cookie {
+  border-style: none;
+  padding: 0.5rem 1rem;
+  color: #4f2626;
+  font-size: 0.7rem;
+  border-radius: 0.4rem;
+  font-family: "League Spartan";
+  cursor: pointer;
+}
+
+#idheader {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+#idheader .divnav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#idheader .divnav .nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+#idheader .divnav .nav .headerIcon {
+  display: flex;
+  gap: 10px;
+}
+#idheader .divnav .headerAuth {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+#idheader .divnav .headerAuth .navbar-titre {
+  gap: 10px;
+  display: flex;
+  font-family: "League Spartan";
+  font-size: 30px;
+  text-decoration: none;
+  align-items: center;
+}
+#idheader .divnav .annonce {
+  text-decoration: none;
+  justify-self: right;
+}
+
+@media screen and (max-width: 800px) {
+  #idheader .logo {
+    width: 200px;
+    height: 98px;
+  }
+  #idheader .divnav {
+    display: none;
+  }
+}
+#footer {
+  background-color: #f7dfae;
+  border: 1px, solid, #cab673;
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+}
+#footer .menubas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#footer .menubas .apropos {
+  font-size: 30px;
+  margin: 0;
+}
+#footer .menubas .contact {
+  font-size: 30px;
+  margin: 0;
+  text-decoration: none;
+}
+#footer .menubas .mentions {
+  font-size: 30px;
+  margin: 0;
+}
+#footer .sociaux {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#footer .sociaux .logosociaux {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+}
+
+@media screen and (max-width: 1000px) {
+  #footer {
+    background-color: #f7dfae;
+    border: 1px, solid, #cab673;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    width: 100vw;
+  }
+  #footer .menubas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+  }
+  #footer .menubas .apropos {
+    font-size: 20px !important;
+    margin: 0;
+    margin-top: 15px;
+  }
+  #footer .menubas .contact {
+    font-size: 20px !important;
+    margin: 0;
+    text-decoration: none;
+  }
+  #footer .menubas .mentions {
+    font-size: 20px !important;
+    margin: 0;
+  }
+  #footer .sociaux {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  #footer .sociaux .logosociaux {
+    height: 45px;
+    width: 45px;
+  }
+}
+.fondinscription {
+  border: solid 3px #f4a159 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0cd8c;
+  border-radius: 25px;
+  width: 80vw;
+}
+.fondinscription h1 {
+  text-align: center;
+}
+.fondinscription .divcol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 20px;
+  width: 80vw;
+}
+.fondinscription .divcol .col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  width: 80vw;
+}
+.fondinscription .divcol .col form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fondinscription .divcol .caseinscription {
+  background-color: #f7dfae;
+  border: 3px, solid, #cab673;
+  border-radius: 19px;
+  width: 9rem;
+  height: 2rem;
+  text-align: center;
+}
+
+.btninscription {
+  background-color: #e96a25;
+  border: none;
+  border-radius: 19px;
+  width: 10rem;
+  margin-bottom: 10px;
+}
+.btninscription .sinscrire {
+  color: white;
+}
+
+@media screen and (min-width: 801px) {
+  .fondinscription {
+    width: 50vw;
+  }
+  .fondinscription .divcol {
+    align-items: center;
+  }
+  .fondinscription .divcol .col {
+    align-items: center;
+  }
+  .fondinscription .divcol .col .caseinscription {
+    background-color: #f7dfae;
+    border: 3px, solid, #cab673;
+    border-radius: 19px;
+    width: 15rem;
+    height: 2rem;
+    text-align: center;
+  }
+}
+.divaccueil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.divaccueil .searchbar {
+  background-color: #f0cd8c;
+  border: 3px solid #f4a159;
+  border-radius: 27px;
+  width: 95vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+.divaccueil .searchbar h1 {
+  font-size: 1rem;
+  margin-left: 2rem;
+}
+.divaccueil .searchbar .dropdown {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.divaccueil .searchbar .dropdown .btncatdrop {
+  background-color: #f7dfae;
+  border-radius: 19px;
+  border: 3px solid #cab673;
+  gap: 10px;
+}
+.divaccueil .searchbar .dropdown .btnsearch {
+  background-color: #e96a25;
+  border-radius: 19px;
+  border: none;
+  color: white;
+}
+
+.divcat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+  align-items: center;
+}
+.divcat .divcatcol {
+  display: flex;
+  gap: 10px;
+}
+.divcat .divcatcol .btndivcat1 {
+  background-color: #694973;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  line-height: 40px;
+  font-family: "rubik distressed";
+  font-size: 17px;
+  width: 5rem;
+  height: 5rem;
+}
+.divcat .divcatcol .btndivcat2 {
+  background-color: #82bbbd;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  line-height: 40px;
+  font-family: "rubik distressed";
+  font-size: 17px;
+  width: 5rem;
+  height: 5rem;
+}
+.divcat .divcatcol2 {
+  display: flex;
+  gap: 10px;
+}
+.divcat .divcatcol2 .btndivcat3 {
+  background-color: #85ad79;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  line-height: 40px;
+  font-family: "rubik distressed";
+  font-size: 17px;
+  width: 5rem;
+  height: 5rem;
+}
+.divcat .divcatcol2 .btndivcat4 {
+  background-color: #c55456;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  line-height: 40px;
+  font-family: "rubik distressed";
+  font-size: 17px;
+  width: 5rem;
+  height: 5rem;
+}
+
+@media screen and (min-width: 801px) and (max-width: 1400px) {
+  .divaccueil .searchbar h1 {
+    font-size: 2rem;
+    margin-left: 2rem;
+  }
+  .divaccueil .searchbar .dropdown {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .divaccueil .searchbar .dropdown .btncatdrop {
+    background-color: #f7dfae;
+    border-radius: 19px;
+    border: 3px solid #cab673;
+    width: 20%;
+    height: 2rem;
+    gap: 10px;
+  }
+  .divaccueil .searchbar .dropdown .btnsearch {
+    border-radius: 19px;
+    border: none;
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 10rem;
+    height: 2rem;
+  }
+  .divcat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+  }
+  .divcat .divcatcol {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .divcat .divcatcol .btndivcat1 {
+    background-color: #694973;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    line-height: 60px;
+    font-family: "rubik distressed";
+    font-size: 32px;
+    width: 10rem;
+    height: 10rem;
+  }
+  .divcat .divcatcol .btndivcat2 {
+    background-color: #82bbbd;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    line-height: 60px;
+    font-family: "rubik distressed";
+    font-size: 32px;
+    width: 10rem;
+    height: 10rem;
+  }
+  .divcat .divcatcol2 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .divcat .divcatcol2 .btndivcat3 {
+    background-color: #85ad79;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    line-height: 60px;
+    font-family: "rubik distressed";
+    font-size: 32px;
+    width: 10rem;
+    height: 10rem;
+  }
+  .divcat .divcatcol2 .btndivcat4 {
+    background-color: #c55456;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    line-height: 60px;
+    font-family: "rubik distressed";
+    font-size: 32px;
+    width: 10rem;
+    height: 10rem;
+  }
+}
+@media screen and (min-width: 1401px) {
+  .divaccueil .searchbar h1 {
+    font-size: 2rem;
+    margin-left: 2rem;
+  }
+  .divaccueil .searchbar .dropdown {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .divaccueil .searchbar .dropdown .btncatdrop {
+    background-color: #f7dfae;
+    border-radius: 19px;
+    border: 3px solid #cab673;
+    width: 20%;
+    height: 2rem;
+    gap: 10px;
+  }
+  .divaccueil .searchbar .dropdown .btnsearch {
+    border-radius: 19px;
+    border: none;
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 10rem;
+    height: 2rem;
+  }
+  .divcat {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+  }
+  .divcat .divcatcol {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .divcat .divcatcol .btndivcat1 {
+    background-color: #694973;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    line-height: 60px;
+    font-family: "rubik distressed";
+    font-size: 32px;
+    width: 10rem;
+    height: 10rem;
+  }
+  .divcat .divcatcol .btndivcat2 {
+    background-color: #82bbbd;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    line-height: 60px;
+    font-family: "rubik distressed";
+    font-size: 32px;
+    width: 10rem;
+    height: 10rem;
+  }
+  .divcat .divcatcol2 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .divcat .divcatcol2 .btndivcat3 {
+    background-color: #85ad79;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    line-height: 60px;
+    font-family: "rubik distressed";
+    font-size: 32px;
+    width: 10rem;
+    height: 10rem;
+  }
+  .divcat .divcatcol2 .btndivcat4 {
+    background-color: #c55456;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    line-height: 60px;
+    font-family: "rubik distressed";
+    font-size: 32px;
+    width: 10rem;
+    height: 10rem;
+  }
+}
+.divaccueil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.divaccueil .searchbar {
+  background-color: #f0cd8c;
+  border: 3px solid #f4a159;
+  border-radius: 27px;
+  width: 95vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+.divaccueil .searchbar h1 {
+  font-size: 1rem;
+  margin-left: 2rem;
+}
+.divaccueil .searchbar .dropdown {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.divaccueil .searchbar .dropdown .btncatdrop {
+  background-color: #f7dfae;
+  border-radius: 19px;
+  border: 3px solid #cab673;
+  gap: 10px;
+}
+.divaccueil .searchbar .dropdown .btncatdrop .licat {
+  font-size: 20px;
+}
+.divaccueil .searchbar .dropdown .btnsearch {
+  background-color: #e96a25;
+  border-radius: 19px;
+  border: none;
+  color: white;
+}
+
+.case-events {
+  display: flex;
+  flex-direction: column;
+}
+.case-events .outils .map {
+  height: 1.5rem;
+  width: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  background: rgba(255, 255, 255, 0);
+  border: 3px solid #cab673;
+  border-radius: 12px;
+}
+.case-events .outils .map .apimap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.case-events .outils .map p {
+  font-size: 25px;
+}
+.case-events .outils .map img {
+  margin-left: 5px;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.case-events .map-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+.case-events .map-container .maps-google {
+  width: 80%;
+  height: 200px;
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+.events .event-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+.events .event-container h2 {
+  margin: 5px;
+}
+.events .event-container .carte {
+  width: 95vw;
+  height: auto;
+  border-radius: 30px;
+}
+.events .event-container .carte .lien-page-event {
+  text-decoration: none;
+}
+.events .event-container .carte .description {
+  margin: 20px;
+  display: -webkit-box;
+  overflow-y: hidden;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  font-size: 25px;
+  color: white;
+}
+.events .event-container .carte .prix {
+  margin-left: 20px;
+}
+.events .event-container .carte .img-titre-event {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  gap: 20px;
+}
+.events .event-container .carte .img-titre-event .eventimg {
+  width: 3rem;
+  height: 4rem;
+}
+
+@media screen and (min-width: 801px) and (max-width: 1400px) {
+  .divaccueil .searchbar h1 {
+    font-size: 2rem;
+    margin-left: 2rem;
+  }
+  .divaccueil .searchbar .dropdown {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .divaccueil .searchbar .dropdown .btncatdrop {
+    background-color: #f7dfae;
+    border-radius: 19px;
+    border: 3px solid #cab673;
+    width: 20%;
+    height: 2rem;
+    gap: 10px;
+  }
+  .divaccueil .searchbar .dropdown .btnsearch {
+    border-radius: 19px;
+    border: none;
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 10rem;
+    height: 2rem;
+  }
+  .case-events .outils {
+    display: flex;
+    justify-content: right;
+  }
+}
+@media screen and (min-width: 1401px) {
+  .divaccueil .searchbar h1 {
+    font-size: 2rem;
+    margin-left: 2rem;
+  }
+  .divaccueil .searchbar .dropdown {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .divaccueil .searchbar .dropdown .btncatdrop {
+    background-color: #f7dfae;
+    border-radius: 19px;
+    border: 3px solid #cab673;
+    width: 20%;
+    height: 2rem;
+    gap: 10px;
+  }
+  .divaccueil .searchbar .dropdown .btnsearch {
+    border-radius: 19px;
+    border: none;
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 10rem;
+    height: 2rem;
+  }
+  .case-events .outils {
+    display: flex;
+    justify-content: right;
+  }
+  .case-events .events {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .case-events .events .event-container {
+    width: 30%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .case-events .events .event-container .carte {
+    width: 100%;
+    height: 320px;
+  }
+}

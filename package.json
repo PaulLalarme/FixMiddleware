@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "dev": "encore dev --watch"
+  },
+  "dependencies": {
+    "@babel/core": "^7.27.4",
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/stimulus-webpack-helpers": "^1.0.1",
+    "core-js": "^3.43.0",
+    "sass": "^1.89.2",
+    "sass-loader": "^16.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.27.2",
+    "@faker-js/faker": "^9.8.0",
+    "@symfony/webpack-encore": "^5.1.0",
+    "babel-loader": "^10.0.0",
+    "copy-webpack-plugin": "^13.0.0",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
+  }
+}
